@@ -1,1 +1,1 @@
-# SNA Group 14 - Graph Recommendation
+# SNA Group 14 - Graph-Based Recommendation
