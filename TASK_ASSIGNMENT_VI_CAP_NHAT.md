@@ -105,21 +105,6 @@ MyDrive/Data_SNA_Group14/
 
 **Mỗi lượt E1** giữ `run_config.json`, `metrics.json`, `verification.json`, `validation_history.json`, `training_console.log`, `checkpoints/`, `logs/` trong `experiments/E1/<model>/seed_<seed>/`. E2–E4 sử dụng thư mục riêng tương ứng; không ghi đè output của E1. **Không dùng Drive cá nhân làm điều kiện bắt buộc duy nhất cho người ngoài tái hiện:** README phải chỉ cách tải dữ liệu từ nguồn công khai, tổ chức lại đường dẫn tương đương và chạy lại với Colab riêng.
 
-### 2.3. Di chuyển 3 notebook hiện có từ thư mục gốc sang `notebooks/`
-
-Leader thực hiện **một lần** trong bản clone GitHub nhóm, trước khi giao task mới:
-
-```bash
-git pull origin main
-mkdir -p notebooks
-git mv 01_data_inspection.ipynb notebooks/
-git mv 02_E1_LightGCN_Setup.ipynb notebooks/
-git mv 03_E1_Full_Training.ipynb notebooks/
-git commit -m "refactor: organize Colab notebooks directory"
-git push origin main
-```
-
-Các lệnh `git mv` ở trên áp dụng khi ba tệp vẫn ở thư mục gốc và đúng tên như đã nêu. **Nếu đã chuyển rồi, không chạy lại lệnh**; chỉ kiểm tra trạng thái Git và đường dẫn thực tế. Di chuyển notebook trong GitHub **không thay đổi** dữ liệu/checkpoint ở Google Drive. Thành viên sau khi pull phiên bản mới phải mở notebook từ đường dẫn `notebooks/`.
 
 ### 2.4. Ai chịu trách nhiệm cập nhật tài liệu tái hiện?
 
