@@ -1,0 +1,49 @@
+{
+  "project": "SNA_Group14_Amazon_LLM_Profiles_v2",
+  "run_id": "gemini_colab_pilot_001",
+  "paths": {
+    "project_root": "/content/drive/MyDrive/Data_SNA_Group14",
+    "run_root": "/content/drive/MyDrive/Data_SNA_Group14/experiments_llm_colab_v21",
+    "rlmrec_repo": "/content/RLMRec",
+    "group_repo": "/content/project_sna_group14",
+    "raw_metadata": "/content/drive/MyDrive/Amazon_raw/meta_Books.json.gz",
+    "raw_reviews": "/content/drive/MyDrive/Amazon_raw/reviews_Books_5.json.gz"
+  },
+  "source": {
+    "rlmrec_commit": "22413752246de3dee8ab0d509f7f7a8889080f95",
+    "group_commit": "c17caeb4448a8add7939510411339af918d258bb"
+  },
+  "data": {
+    "expected_users": 11000,
+    "expected_items": 9332,
+    "expected_train": 120464,
+    "expected_validation": 40290,
+    "expected_test": 40106,
+    "min_metadata_coverage": 0.95,
+    "max_description_chars": 4000,
+    "max_review_chars": 2000
+  },
+  "profiles": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "temperature": 0,
+    "max_output_tokens": 1024,
+    "max_history_items": 20,
+    "history_seed": 2023,
+    "item_no_description": "None",
+    "max_daily_requests": 450,
+    "min_interval_seconds": 4.5,
+    "max_retries": 4,
+    "user_review_policy": "none"
+  },
+  "embedding": {
+    "provider": "openai",
+    "local_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "openai_model": "text-embedding-ada-002",
+    "batch_size": 64
+  },
+  "execution": {
+    "notebook_timeout_seconds": 14400,
+    "allow_group_commit_drift": false
+  }
+}

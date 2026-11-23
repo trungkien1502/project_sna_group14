@@ -1,0 +1,25 @@
+{
+  "schema": "sna-experiment-plan-v1",
+  "status": "PLAN_ONLY_DO_NOT_AUTORUN",
+  "dataset_version": "REQUIRED_FROM_NEW_DATA",
+  "split_manifest": "REQUIRED",
+  "semantic_profile_manifest": "REQUIRED",
+  "model_source_commit": "22413752246de3dee8ab0d509f7f7a8889080f95",
+  "training_adapter": "NOT_YET_INTEGRATED",
+  "inference_adapter": "NOT_YET_INTEGRATED",
+  "llm_revision": "REQUIRED",
+  "embedding_revision": "REQUIRED",
+  "seeds": [2023, 2024, 2025],
+  "k": [10, 20],
+  "mask": ["train", "validation"],
+  "experiments": {
+    "E1": ["most_popular", "lightgcn", "rlmrec_con_full"],
+    "E2": ["accuracy", "ARP", "APLT", "HeadRecall", "TailRecall", "Coverage"],
+    "E3A": ["graph_only", "user_only", "item_only", "full"],
+    "E3B": ["evaluate_E3A_popularity_bias"],
+    "E3C": {"mode": "full_only", "kd_weights": [0, 0.005, 0.01, 0.02, 0.05]},
+    "E3D": ["sampled_anchor_spearman_user_side", "sampled_anchor_spearman_item_side", "paired_user_delta_recall"],
+    "E4": {"models": ["lightgcn", "rlmrec_con_full"], "layers": [1, 2, 3]}
+  },
+  "test_access": "FINAL_EVALUATION_ONLY"
+}

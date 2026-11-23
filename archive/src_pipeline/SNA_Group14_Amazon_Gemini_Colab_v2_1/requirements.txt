@@ -1,0 +1,10 @@
+numpy>=1.26
+scipy>=1.11
+PyYAML>=6.0
+nbformat>=5.10
+google-genai>=1.0
+# Optional zero-API-cost semantic embedding:
+# sentence-transformers>=3.0
+# Optional paper-matched embedding:
+# openai>=1.50
+# torch is installed by the pinned RLMRec environment / Colab
